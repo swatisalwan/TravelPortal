@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Page</title>
+</head>
+<body>
+<div class="container">
+    <div class="d-flex justify-content-center h-100">
+    <div class="card">
+        <div class="card-header">
+            <h3>Raise Ticket</h3>
+        </div>
+        <div class="card-body">
+         
+       <form [formGroup]="ticketForm" (ngSubmit)="onFormSubmit()">
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                <label for="type">Request Type</label>
+                <select class="custom-select" formControlName="requestType" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.requestType.errors }" >
+                <option value="Travel Tickets">Travel Tickets</option>
+                <option value="Visa">Visa</option>
+                <option value="Work Permit">Work Permit</option>
+                <option value="Hotel Stay">Hotel Stay</option>
+                 </select>
+                 <div *ngIf="submitted && f.requestType?.errors" class="invalid-feedback">
+                  <div *ngIf="f.requestType.errors?.required"><mark>This field is required</mark></div>
+                </div>
+        </div>
+
+
+        <div class="form-group col-md-6">
+            <label for="priority">Priority</label>
+                <select class="custom-select" formControlName="priority" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.priority.errors }" >  
+                <option value="Normal">Normal</option>
+                <option value="Urgent">Urgent</option>
+                <option value="Immediate">Immediate</option>
+                </select>
+            <div *ngIf="submitted && f.priority?.errors" class="invalid-feedback">
+              <div *ngIf="f.priority.errors?.required"><mark>This field is required</mark></div>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="toTravelCity">To Travel City</label>
+            <select class="custom-select" formControlName="toTravelCity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.toTravelCity.errors }" >
+                <option value="Paris">Paris</option>
+                <option value="Amsterdam">Amsterdam</option>
+                <option value="London">London</option>
+                <option value="Copenhagen">Copenhagen</option>
+            </select>
+            <div *ngIf="submitted && f.toTravelCity?.errors" class="invalid-feedback">
+              <div *ngIf="f.toTravelCity.errors?.required"><mark>This field is required</mark></div>
+            </div>
+          </div>
+
+
+          <div class="form-group col-md-6">
+            <label for="fromTravelCity">From Travel City</label>
+            <select class="custom-select" formControlName="fromTravelCity" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fromTravelCity.errors }" >
+            <option value="Gurgaon">Gurgaon</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Delhi">Delhi</option>
+            </select>
+
+            <div *ngIf="submitted && f.fromTravelCity?.errors" class="invalid-feedback">
+              <div *ngIf="f.fromTravelCity.errors?.required"><mark>This field is required</mark></div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="fromTravelCity">Travel Start Date</label> 
+            <input type="date" formControlName="startDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.startDate.errors }" />
+            <div *ngIf="submitted && f.startDate?.errors" class="invalid-feedback">
+              <div *ngIf="f.startDate.errors?.required"><mark>Travel Start Date is required</mark></div>
+            </div>
+          </div>
+
+
+            <div class="form-group col-md-6">
+              <label for="fromTravelCity">Travel End Date</label> 
+              <input type="date" formControlName="endDate" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.endDate.errors }" />
+              <div *ngIf="submitted && f.endDate?.errors" class="invalid-feedback">
+                <div *ngIf="f.endDate.errors?.required"><mark>Travel End Date is required</mark></div>
+              </div>
+            </div>
+
+        </div>
+
+        <!-- Passport -->
+        <div class="form-group">
+          <label for="passport">Passport Number</label>
+          <input type="text" formControlName="passportNumber" class="form-control" placeholder="Passport Number"
+          [ngClass]="{ 'is-invalid': submitted && f.passportNumber.errors }" />
+
+          <div *ngIf="submitted && f.passportNumber?.errors" class="invalid-feedback">
+            <div *ngIf="f.passportNumber.errors?.required"><mark>Passport is required</mark></div>
+            <div *ngIf="f.passportNumber.errors?.maxlength"><mark>Passport must be at most 25 characters</mark></div>
+          </div>
+        </div>
+
+
+        <!-- Project Name -->
+
+        <div class="form-group">
+          <label for="project">Project Name</label>
+          <textarea type="text" formControlName="projectName" class="form-control" placeholder="Project Name"
+          [ngClass]="{ 'is-invalid': submitted && f.projectName.errors }" ></textarea>
+
+          <div *ngIf="submitted && f.projectName?.errors" class="invalid-feedback">
+            <div *ngIf="f.projectName.errors?.required"><mark>Project Name is required</mark></div>
+            <div *ngIf="f.projectName.errors?.maxlength"><mark>Project Name must be at most 100 characters</mark></div>
+          </div>
+        </div>
+
+        
+        <div class="form-group">
+            <label for="expense">Expense Borne By:</label><br>
+            <input type="radio" id="nagarro" formControlName="expenseBy" value="nagarro">
+            <label for="nagarro">Nagarro</label><br>
+            <input type="radio" id="client" formControlName="expenseBy" value="client">
+            <label for="client">Client</label><br>
+            
+
+        </div>
+        
+         <!-- Test Approval Name -->
+          <div class="form-group col-md-6">
+                <label for="approvedBy">Travel Approval By</label>
+                <textarea type="text" formControlName="approvedBy" class="form-control" placeholder="Project Approval By"
+                [ngClass]="{ 'is-invalid': submitted && f.approvedBy.errors }" ></textarea>
+            <div *ngIf="submitted && f.approvedBy?.errors" class="invalid-feedback">
+              <div *ngIf="f.approvedBy.errors?.maxlength"><mark>Maximum 100 characters are allowed</mark></div>
+            </div>
+          </div>
+
+            <!-- Expected Duration -->
+            <div class="form-group col-md-4">
+                <label for="duration">Expected Duration Of Travel</label>
+                <textarea type="text" formControlName="duration" class="form-control" placeholder="Duration"
+                [ngClass]="{ 'is-invalid': submitted && f.duration.errors }" ></textarea>
+
+                <div *ngIf="submitted && f.duration?.errors" class="invalid-feedback">
+                  <div *ngIf="f.duration.errors?.maxlength"><mark>Maximum 100 characters are allowed</mark></div>
+                </div>
+            </div>
+       
+
+        <div class="form-group">
+
+            <label for="upperBoundAllowed">Any UpperBound on allowed amount??</label><br>
+
+            <input type="radio" id="yes" formControlName="upperBoundAllowed" value="yes">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" formControlName="upperBoundAllowed" value="no">
+            <label for="no">No</label><br>
+            <small> <b>If yes, Specify </b></small>
+            
+            
+            <div>
+              <textarea type="text" formControlName="upperBound" class="form-control" placeholder="Specify Here"
+              [ngClass]="{ 'is-invalid': submitted && f.upperBound.errors }" ></textarea>
+              <div *ngIf="submitted && f.upperBound?.errors" class="invalid-feedback">
+                <div *ngIf="f.upperBound.errors?.maxlength"><mark>Maximum 500 characters are allowed</mark></div>
+              </div>
+            </div>
+        
+        </div>
+        <div class="form-group">
+            <label for="details">Any Additional Details</label>
+            <textarea type="text" formControlName="additionalDetails" class="form-control" placeholder="Details Here"
+            [ngClass]="{ 'is-invalid': submitted && f.additionalDetails.errors }" > </textarea>
+            <div *ngIf="submitted && f.additionalDetails?.errors" class="invalid-feedback">
+              <div *ngIf="f.additionalDetails.errors?.required"><mark>Details are  required</mark></div>
+              <div *ngIf="f.additionalDetails.errors?.maxlength"><mark>Maximum 1000 characters are allowed</mark></div>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Ticket</button>
+        
+    </form>
+    
+    </div>
+
+  </div>
+</div>
+</div>
+</body>
+</html>

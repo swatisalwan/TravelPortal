@@ -1,0 +1,75 @@
+h3{
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.box{
+    margin-left: 50px;
+    margin-top: 5px;;
+    width:600px;
+    height:550px;
+    background-color: rgba(255, 173, 126, 0.774);
+    border-radius: 10px;
+}
+.inner-box{
+    margin:30px;
+}
+h2{
+    text-align: center;
+}
+.left{
+    text-align: left;
+    float:left;
+    font-weight: 600;
+}
+.left{
+    text-align: right;
+    float:right;
+    font-weight: 600;
+}
+h6{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.btn{
+   
+   width: 200px;
+   margin-top: 40px;
+   margin-left: 60px;
+   background-color: rgba(231, 71, 13, 0.575);
+}
+#editbtn{
+    width: 200px;
+    margin-left: 140px;
+    margin-top: 0px;
+    background-color: rgba(231, 71, 13, 0.575);
+
+}
+.navbar{
+    width: 100%;
+}
+
+a{
+    font-family: cursive;
+    font-weight: bolder;
+}
+table{
+    text-align: left;
+}
+body{
+    background-image: url("/assets/images/bckk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 160%;
+}
+.card{
+    width:400px;
+    margin-left: 40px;
+    height: 400px;
+    background-color: rgba(255, 218, 10, 0.404);
+}
+.card-header{
+    text-align: center;
+    font-weight: bolder;
+}

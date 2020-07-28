@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   
+    <!-- Title -->
+    <title>Home</title>
+</head>
+
+<body>
+       
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <nav class="h-100 navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                        <!-- Nav -->
+                        <div class="collapse navbar-collapse" id="dorneNav">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/showTickets" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Show My Ticket List <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/submitTicket" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Submit Ticket <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                </li>
+
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="/covid19" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Covid Updates<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
+                        
+                            <!-- Add listings btn -->
+                            <div class="dorne-add-listings-btn">
+                                <a href=""  (click) ="logOf()" class="btn dorne-btn">Logout</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Welcome Area Start ***** -->
+    <section class="dorne-welcome-area bg-img bg-overlay" style="background-image: url(assets/images/hero-1.jpg);">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-12 col-md-10">
+                    <div class="hero-content">
+                        <h2>Wander. Work. Explore.</h2>
+                        <h4>A more rewarding way to travel!!</h4>
+                    </div>
+                    <!-- Hero Search Form -->
+                    <div class="hero-search-form">
+                        <!-- Tabs -->
+                        <div class="nav nav-tabs" id="heroTab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Menu For You</a>
+                        
+                        </div>
+                        <!-- Tabs Content -->
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
+                                <h6>What are you looking for?</h6>
+                                <form action="#" method="get">
+                                      <button type="submit" class="btn dorne-btn"  (click)="submitTicket()"><i class="fa fa-search pr-2" aria-hidden="true"></i> Submit Ticket</button>
+                                      <button type="submit" class="btn dorne-btn"  (click)="showTickets()"><i class="fa fa-search pr-2" aria-hidden="true"></i> Show My Tickets</button>
+                                      <button type="submit" class="btn dorne-btn"  (click)="covidUpdates()"><i class="fa fa-search pr-2" aria-hidden="true"></i> Covid Updates</button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                 </div>
+             </div>
+        </div>
+       
+    </section>
+    
+    <!-- ***** Catagory Area Start ***** -->
+    <section class="dorne-catagory-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="all-catagories">
+                        <div class="row">
+                            <!-- Single Catagory Area -->
+                            <div class="col-12 col-sm-6 col-md  m-1">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.2s">
+                                    <div class="catagory-content">
+                                        <!-- <img src="img/core-img/icon-1.png" alt=""> -->
+                                        <a href="#">
+                                            <h6>Hotels Stay</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Catagory Area -->
+                            <div class="col-12 col-sm-6 col-md m-1">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.4s">
+                                    <div class="catagory-content">
+                                        <!-- <img src="img/core-img/icon-2.png" alt=""> -->
+                                        <a href="#">
+                                            <h6>Work Permit</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Catagory Area -->
+                            <div class="col-12 col-sm-6 col-md m-1">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.6s">
+                                    <div class="catagory-content">
+                                        <!-- <img src="img/core-img/icon-3.png" alt=""> -->
+                                        <a href="#">
+                                            <h6>Apply for Visa</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Catagory Area -->
+                            <div class="col-12 col-sm-6 col-md m-1">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.8s">
+                                    <div class="catagory-content">
+                                        <!-- <img src="img/core-img/icon-4.png" alt=""> -->
+                                        <a href="#">
+                                            <h6>Arrange Travel Tickets</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Single Catagory Area -->
+                            <div class="col-12 col-md m-1">
+                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="1s">
+                                    <div class="catagory-content">
+                                        <!-- <img src="img/core-img/icon-5.png" alt=""> -->
+                                        <a href="#">
+                                            <h6>Home Stays</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ****** Footer Area Start ****** -->
+    <!-- <footer class="dorne-footer-area">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 d-md-flex align-items-center justify-content-between">
+                    
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    
+</body>
+
+</html>

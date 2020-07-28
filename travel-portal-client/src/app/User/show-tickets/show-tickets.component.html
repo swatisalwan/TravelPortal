@@ -1,0 +1,55 @@
+<div class="outer">
+<nav class="navbar fixed-top navbar-light" style="background-color: #d5bcdb; ">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/images/logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+    NAGARRO TRAVELS 
+  </a>
+  <a href="/login"  class="btn btn-outline-dark my-2 my-sm-0" role="button">Logout</a>
+  
+</nav>
+<h3 > Your Submitted Tickets</h3>
+<hr> 
+<div class="container">
+  <div class="card-columns">
+    <div *ngFor="let ticket of ticketList" > 
+          <div class="card">
+             <!--Card Header-->
+              <div class="card-header">
+                <b>Ticket Id :{{ticket.ticketId}} </b>
+              </div>
+
+               <!--Card Body-->
+              <div class="card-body ">
+                <table>
+                  <tr>
+                       <th>Project Name :</th>  <td> <span >{{ticket.projectName}}</span></td>
+                  </tr>
+                  <tr> 
+                      <th>From Travel City :</th><td> <span>{{ticket.fromTravelCity}}</span></td>
+                  </tr>
+                  <tr>
+                      <th>Travel City :</th><td>  <span>{{ticket.toTravelCity}}</span></td>
+                  </tr> 
+                  <tr>
+                      <th> Travel City :</th><td>  <span>{{ticket.requestType}}</span></td>
+                  </tr>  
+               </table>
+          
+              </div> 
+
+              <!--Card Footer-->
+              <div class="card-footer"> 
+                 <button type="submit" class="btn" (click)="viewDetails(ticket)">View Details</button>
+              </div>
+          </div>
+    </div>
+  </div>
+    <ul class="nav nav-pills">
+        <li class="nav-item" href=" " *ngFor="let p of pages; let i=index">
+            <a class="nav-link" (click)="setPage(i,$event)" [ngClass]="{'active':i==page}">{{i}}</a>
+        </li>
+</ul>
+</div>
+
+
+  </div>

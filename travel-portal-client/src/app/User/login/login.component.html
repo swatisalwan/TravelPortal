@@ -1,0 +1,53 @@
+<body>
+<div class="container">
+  <nav class="navbar fixed-top navbar-light" style="background-color: #185079; ">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/images/logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+      NAGARRO TRAVELS 
+    </a>
+    <a href="/adminLogin"  class="btn btn-outline-primary my-2 my-sm-0" role="button">Admin Login</a>
+    
+  </nav>
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3>Login</h3>
+			</div>
+			<div class="card-body">
+				<form ngNativeValidate>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input  class="form-control" type="text" name="username" [(ngModel)]="username" id="email" placeholder="username">
+		
+					</div>
+					<div class="input-group form-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input class="form-control" type="password" name="password" [(ngModel)]="password" id="password" placeholder="password">
+					</div>
+					<div class="row align-items-center remember">
+						<input type="checkbox">Remember Me
+					</div>
+					<div class="form-group">
+            <input class="btn float-right login_btn" type="submit" name="Login" id="go" value="Login" (click)="doLogin()">
+					</div>
+				</form>
+			</div>
+			<div class="card-footer">
+				<div class="d-flex justify-content-center links">
+          Don't have an account?<a href="/register">Register Now</a>
+           
+				</div>
+				<div class="d-flex justify-content-center">
+          <a href="/forgetPassword">Forgot your password?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+  

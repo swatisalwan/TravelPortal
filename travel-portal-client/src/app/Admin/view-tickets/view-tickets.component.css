@@ -1,0 +1,76 @@
+.navbar{
+    width: 100%;
+}
+body{
+    background-image: url("/assets/images/bckk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 160%;
+}
+a{
+    font-family: cursive;
+    font-weight: bolder;
+}
+h3{
+    margin-top: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+.box{
+    margin-left: 50px;
+    margin-top: 50px;;
+    width:600px;
+    height:550px;
+    background-color: rgba(255, 173, 126, 0.774);
+    border-radius: 10px;
+}
+.inner-box{
+   
+    margin:30px;
+}
+h2{
+    text-align: center;
+}
+.left{
+    text-align: left;
+    float:left;
+    font-weight: 600;
+}
+.left{
+    text-align: right;
+    float:right;
+    font-weight: 600;
+}
+h6{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.card{
+    margin-top: 60px;
+    width:400px;
+    margin-left: 40px;
+    height: 400px;
+    background-color: rgba(255, 218, 10, 0.404);
+}
+.card-header{
+    
+    text-align: center;
+    font-weight: bolder;
+}
+table{
+    text-align: left;
+}
+
+input{
+    width: 240px
+}
+td,tr,th{
+    padding: 2px;
+
+}
+button{
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(231, 71, 13, 0.575);
+}

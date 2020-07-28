@@ -1,0 +1,71 @@
+<body>
+<nav class="navbar fixed-top navbar-light" style="background-color: #a75e2d98; ">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/images/logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+      NAGARRO TRAVELS 
+    </a>
+    <a href="" class="btn btn-outline-dark my-2 my-sm-0" role="button" (click)="logOf()">Logout</a>
+    
+</nav>
+    <h3>Detailed View of Your Ticket</h3>
+    <hr>
+<div class="row">
+    <div class="box">
+        <div class="inner-box">
+        <h2>Ticket ID: {{ticket.ticketId}}</h2>
+        <h6>Status: <b><mark>{{ticket.status}}</mark></b></h6>
+        <hr>
+        <p class="left">Project Name :<b>{{ticket.projectName}}</b></p>
+                    <p class="right">Ticket Date :<b>{{ticket.submittedDate}}</b> </p>
+
+        <p class="left">Request Type :<b>{{ticket.requestType}}</b></p>
+                    <p class="right">Priority :<b>{{ticket.priority}}</b> </p>
+
+        <p class="left">Travel City :<b>{{ticket.toTravelCity}}</b></p>
+                    <p class="right">From City :<b>{{ticket.fromTravelCity}}</b> </p>
+
+        <p class="left">Travel Start Date :<b>{{ticket.startDate}}</b></p>
+                    <p class="right">Travel End Date  :<b>{{ticket.endDate}}</b> </p>
+
+        <p class="left">Passport Number :<b>{{ticket.passportNumber}}</b></p>
+                    <p class="right">Expenses Borne By  :<b>{{ticket.expenseBy}}</b> </p>
+
+        <p class="left">Approved By :<b>{{ticket.approvedBy}}</b></p>
+                    <p class="right">Duration  :<b>{{ticket.duration}}</b> </p>
+
+        <p class="right">Upper Bound Cost Allowed?:<b>{{ticket.upperBoundAllowed}}</b></p><hr>
+                    <p align="center"><b>Additional Details  :</b></p>
+                    <p align="center"><b>{{ticket.additionalDetails}} </b></p>
+            <button class="btn" id="editbtn" (click)=editTicket()>Edit Ticket</button>
+        </div>
+    </div> 
+
+
+    <div class="card">
+        <div class="card-header">
+            Additional Comments By Admin
+        </div>
+        <div class="card-body">
+
+            <table>
+                <tr>
+                    <th>Ticket-Id:</th><td><b>{{ticket.ticketId}}</b></td>
+                </tr>
+                <tr>
+                    <th>Comments: </th><td>{{comments}}</td>
+                </tr>
+                <tr>
+                    <th>Documents:</th><td><a [href]="retrievedImage" download ={{download}}> {{name}}  </a></td>
+                </tr>
+                <tr>
+                    <th>Status:</th><td>{{status}}</td>
+                </tr>
+
+            </table>
+            <button class="btn btn-primary" (click)="getImage()">Get Comments</button>
+
+          <marquee> Click here to read Admin's Comments and Pdf's</marquee>
+        </div>
+      </div>
+</div>
+</body>

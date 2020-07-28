@@ -1,0 +1,29 @@
+html,body{
+    background-image: url('/assets/images/ticket.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 170%;
+    font-family: 'Numans', sans-serif; 
+    
+   }
+   
+   .container{
+   height: 100%;
+   align-content: center;
+   }
+   
+   .card{
+   height: 1050px;
+   width: 800px;
+   background-color: rgba(163, 98, 98, 0.5) !important;
+   }
+   
+   
+   .card-header h3{
+   color: white;
+   }
+   
+   h3{
+       font-family: cursive;
+       font-weight: bolder;
+   }

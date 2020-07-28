@@ -1,0 +1,91 @@
+<div class="container">
+
+<nav class="navbar fixed-top navbar-light" style="background-color:rgba(72, 45, 167, 0.452); ">
+  <a class="navbar-brand" href="#">
+    <img src="/assets/images/logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+    NAGARRO TRAVELS 
+  </a>
+  <a href="" (click) ="logOf()" sclass="btn btn-outline-primary my-2 my-sm-0" role="button">Logout</a>
+  
+</nav>
+<div class="heading">
+ <div><h4>You can filter data here </h4><small>(Click on table headers for sorting)</small></div> 
+  
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input class="write" matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+  </mat-form-field>
+  <hr>
+</div>
+
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <!-- - Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition"-->
+
+  <!-- Position Column --> 
+   <ng-container matColumnDef="ticketId">
+    <th mat-header-cell *matHeaderCellDef  mat-sort-header> Ticket Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.ticketId}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="firstName">
+    <th mat-header-cell *matHeaderCellDef  mat-sort-header>Name</th>
+    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+  </ng-container>
+
+  <!-- Name Column  -->
+   <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef  mat-sort-header> Status </th>
+    <td mat-cell *matCellDef="let element"> {{element.status}}</td>
+  </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="priority">
+      <th mat-header-cell *matHeaderCellDef  mat-sort-header> Priority</th>
+      <td mat-cell *matCellDef="let element"> {{element.priority}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="submittedDate">
+      <th mat-header-cell *matHeaderCellDef  mat-sort-header> Submitted Date</th>
+      <td mat-cell *matCellDef="let element"> {{element.submittedDate}} </td>
+    </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="projectName">
+    <th mat-header-cell *matHeaderCellDef  mat-sort-header> Project Name</th>
+    <td mat-cell *matCellDef="let element">{{element.projectName}} </td>
+  </ng-container>  
+
+  <ng-container matColumnDef="toTravelCity">
+    <th mat-header-cell *matHeaderCellDef  mat-sort-header> Travel City </th>
+    <td mat-cell *matCellDef="let element">{{element.toTravelCity}} </td>
+  </ng-container>
+
+
+
+  <!-- Get Details -->
+  <ng-container matColumnDef="Extra">
+    <th mat-header-cell *matHeaderCellDef> Details </th>
+    <td mat-cell *matCellDef="let element" (click)="$event.stopPropagation()">
+       <button mat-raised-button color="primary" (click)="viewDetail(element)">Get Details</button> </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+ 
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div>
+
+
+
+               
+       
+    

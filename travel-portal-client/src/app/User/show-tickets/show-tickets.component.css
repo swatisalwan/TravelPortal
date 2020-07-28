@@ -1,0 +1,50 @@
+.btn{
+    color: black;
+ }
+    
+.btn:hover{
+    color: black;
+    background-color: white;
+    }
+
+.card-footer{
+    background-color: rgb(191, 134, 194);
+    font-family: cursive;
+    font-weight: bolder;
+
+}
+
+.card-header{
+    background-color: rgb(191, 134, 194);
+    
+}
+.card-body{
+    background-color: rgb(225, 200, 226);
+    
+}
+
+.navbar{
+    width: 100%;
+}
+
+a{
+    font-family: cursive;
+    font-weight: bolder;
+}
+h3{
+    margin-left: 30px;
+    font-weight: bolder;
+    font-family: cursive;
+    color: purple;
+    margin-top: 65px;
+   
+}
+.outer{
+    background-image: url("/assets/images/backg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+span{
+    font-weight: 600;
+}
